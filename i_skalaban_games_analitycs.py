@@ -24,7 +24,10 @@ default_args = {
 
 
 CHAT_ID = -1001968507364
-BOT_TOKEN = '6081983437:AAFPahX8Y2ame5F2YF7RqCJKV3xQD8JAsko'
+try:
+    BOT_TOKEN = Variable.get('telegram_secret')
+except:
+    BOT_TOKEN = ''
 
 
 def send_message(context):
